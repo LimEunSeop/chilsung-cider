@@ -1,0 +1,52 @@
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+
+  .item {
+    .innerGrid {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      grid-template-rows: 80px;
+      gap: 10px;
+    }
+
+    .imgbox {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text {
+      h3 {
+        margin: 10px 0 10px 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: min(calc((100vw - 100%) / -2), 0px);
+    z-index: -1;
+    min-width: 100%;
+    width: 100vw;
+    background-color: #666666;
+  }
+}

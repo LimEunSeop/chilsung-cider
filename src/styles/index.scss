@@ -1,0 +1,19 @@
+@import 'normalize.css';
+@import './accesibility.scss';
+@import './reset.scss';
+
+html {
+  font-family: 'Noto Sans KR', Arial, sans-serif;
+  letter-spacing: -0.07em;
+}
+
+body {
+}
+
+@media (min-width: 1886px) {
+  html {
+    // 가로가 100vw 인데 세로 스크롤이 생긴 경우 생기는 가로스크롤을 제거하기 위함.
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}

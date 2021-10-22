@@ -1,0 +1,31 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.slider-item {
+  img {
+    width: 100%;
+  }
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+
+  li button {
+    box-sizing: border-box !important;
+    width: 10px !important;
+    height: 10px !important;
+    border: none;
+    border-radius: 50%;
+    background-color: #488b54;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+  }
+  li[class='slick-active'] button {
+    background-color: #656565 !important;
+  }
+}

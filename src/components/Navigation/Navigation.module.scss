@@ -1,0 +1,95 @@
+$primary-menu-height: 60px;
+$sub-menu-height: 50px;
+
+.primary-menu-list {
+  display: grid;
+  grid-template-columns: repeat(6, 180px);
+  grid-template-rows: $primary-menu-height;
+
+  &:hover .sub-menu-list {
+    visibility: visible;
+    height: 200px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: calc($primary-menu-height + $sub-menu-height);
+    left: min(calc((100vw - 100%) / -2), 0px);
+    min-width: 100%;
+    width: 100vw;
+    height: 0;
+    z-index: 998;
+    background-color: #fff;
+    transition: all 0.6s;
+  }
+  &:hover::after {
+    height: 210px;
+  }
+}
+
+.primary-menu-item {
+  position: relative;
+  z-index: 999;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+
+  & > a {
+    display: block;
+    height: $primary-menu-height;
+    line-height: $primary-menu-height;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #fe0000;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 10px;
+    z-index: 999;
+    background-color: #fe000000;
+    transition: all 0.2s;
+  }
+  &:hover::after {
+    background-color: #fe0000ff;
+  }
+}
+
+.more-button {
+  width: 50px;
+  height: 50px;
+}
+
+.sub-menu-list {
+  visibility: hidden;
+  margin-top: 10px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.6s;
+}
+
+.sub-menu-item {
+  height: $sub-menu-height;
+  font-size: 18px;
+
+  & > a {
+    display: block;
+    height: $sub-menu-height;
+    line-height: $sub-menu-height;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #666666;
+      color: #fff;
+    }
+  }
+}
