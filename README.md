@@ -1,4 +1,6 @@
-# 칠성사이다 페이지
+# 칠성사이다 메인페이지
+
+<a href="https://limeunseop.github.io/chilsung-cider">![link](https://img.shields.io/badge/link-https%3A%2F%2Flimeunseop.github.io%2Fchilsung%2Dcider-brightgreen)</a>
 
 - 이 페이지는 시안을 최대한 구현해보는 방향으로 제작하였으며, 다소 레거시적인 요소들이 있을수도 있습니다.
 
